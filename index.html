@@ -18,16 +18,22 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              gold: '#E5B842',
-              goldLight: '#F59E0B',
-              goldDark: '#B8860B',
-              darkBg: '#0B0F19',
-              darkSurface: '#111827',
-              darkCard: '#161F30',
-              accentBlue: '#2563EB',
-              accentOrange: '#EA580C',
-              accentRed: '#DC2626'
+            gray: {
+              50: '#F4F7FF', 100: '#E8EEFC', 200: '#D3DDF5', 300: '#B4C3E8', 400: '#8FA2D1',
+              500: '#6579A8', 600: '#475A8A', 700: '#2F4070', 800: '#1B2A57', 900: '#0F1A40', 950: '#0A1230'
+            },
+                        brand: {
+              gold: '#F7B52C',
+              goldLight: '#F26B1D',
+              goldDark: '#C2530C',
+              darkBg: '#070D24',
+              darkSurface: '#0B1433',
+              darkCard: '#101C47',
+              accentBlue: '#4FB3E8',
+              accentOrange: '#F26B1D',
+              accentRed: '#DC2626',
+              sky: '#4FB3E8',
+              royal: '#2F55B8'
             }
           },
           fontFamily: {
@@ -47,43 +53,44 @@
     }
 
     .text-glow-gold {
-      text-shadow: 0 0 20px rgba(229, 184, 66, 0.45);
+      text-shadow: 0 0 20px rgba(247, 181, 44, 0.45);
     }
 
     .text-glow-blue {
-      text-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+      text-shadow: 0 0 20px rgba(79, 179, 232, 0.5);
     }
   </style>
   <!-- Custom Styles: Visual Effects & Borders -->
   <style data-purpose="visual-accents">
     .gold-gradient-border {
       position: relative;
-      border: 1px solid rgba(229, 184, 66, 0.25);
-      background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(17, 24, 39, 0.95) 100%);
+      border: 1px solid rgba(247, 181, 44, 0.25);
+      background: linear-gradient(180deg, rgba(16, 28, 71, 0.9) 0%, rgba(11, 20, 51, 0.95) 100%);
     }
 
     .gold-gradient-border:hover {
-      border-color: rgba(229, 184, 66, 0.6);
-      box-shadow: 0 10px 30px -10px rgba(229, 184, 66, 0.2);
+      border-color: rgba(247, 181, 44, 0.6);
+      box-shadow: 0 10px 30px -10px rgba(247, 181, 44, 0.2);
     }
 
     .hero-glow-bg {
-      background: radial-gradient(circle at 75% 35%, rgba(229, 184, 66, 0.12) 0%, rgba(37, 99, 235, 0.1) 40%, rgba(11, 15, 25, 0) 70%);
+      background: radial-gradient(circle at 50% 22%, rgba(47, 85, 184, 0.45) 0%, rgba(79, 179, 232, 0.12) 38%, rgba(7, 13, 36, 0) 70%),
+                  radial-gradient(circle at 90% 90%, rgba(242, 107, 29, 0.14) 0%, rgba(7, 13, 36, 0) 45%);
     }
 
     .table-row-hover:hover {
-      background-color: rgba(229, 184, 66, 0.05);
+      background-color: rgba(247, 181, 44, 0.05);
     }
   </style>
 </head>
 
-<body class="bg-[#0B0F19] text-gray-100 font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen">
+<body class="bg-[#070D24] text-gray-100 font-sans antialiased selection:bg-brand-gold selection:text-black min-h-screen">
   
   <!-- BEGIN: MainHeader -->
-  <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
+  <header class="sticky top-0 z-50 bg-[#070D24]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Brand & Official Logo -->
-      <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="#"><img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="img/Rapibasket.jpeg">
+      <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="#"><img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(247, 181, 44,0.35)]" src="img/Rapibasket.jpeg">
         <div class="flex flex-col"><span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">RAPIBASKET CAÑETE</span></div>
       </a>
       <!-- Desktop Navigation Links -->
@@ -99,6 +106,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg></button></div>
     </div>
+  <div aria-hidden="true" class="h-[3px] w-full bg-gradient-to-r from-brand-royal via-brand-sky to-brand-gold"></div>
   </header>
 
 
@@ -108,7 +116,7 @@
     <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
     <!-- Panel lateral deslizante (Off-canvas) -->
-    <div id="mobile-drawer-panel" class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424]/95 backdrop-blur-xl border-l border-brand-gold/30 shadow-[-10px_0_30px_rgba(0,0,0,0.8)] flex flex-col p-6 z-10 translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
+    <div id="mobile-drawer-panel" class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0B1330]/95 backdrop-blur-xl border-l border-brand-gold/30 shadow-[-10px_0_30px_rgba(0,0,0,0.8)] flex flex-col p-6 z-10 translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
       
       <!-- Encabezado del Drawer -->
       <div class="flex items-center justify-between pb-4 border-b border-gray-800/80">
@@ -188,7 +196,7 @@
       <!-- Section Title -->
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="font-sport font-black text-3xl sm:text-4xl text-white mt-1 uppercase"> TABLA GENERAL DE POSICIONES </h2>
-        <div class="w-16 h-1 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-sky to-brand-gold mx-auto mt-3 rounded-full"></div>
       </div>
       <!-- Toggle Segmentado de Categoría (Fintech Pill Switcher) -->
       <div class="flex justify-center mb-8">
@@ -367,16 +375,16 @@
 
 
   <!-- BEGIN: ResultsAndMVPSection -->
-  <section aria-label="Resultados y MVP" class="py-16 sm:py-20 bg-[#0B0F19] border-b border-gray-800/60" id="resultados">
+  <section aria-label="Resultados y MVP" class="py-16 sm:py-20 bg-[#070D24] border-b border-gray-800/60" id="resultados">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col gap-8">
 
     <div class="text-center mb-6"><span class="text-xs font-bold tracking-widest text-brand-gold uppercase">MVPs</span>
         <h2 class="font-sport font-black text-2xl text-white mt-1 uppercase">DEL ÚLTIMO SÁBADO</h2>
-        <div class="w-12 h-1 bg-brand-gold mx-auto mt-2 rounded-full"></div>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-sky to-brand-gold mx-auto mt-2 rounded-full"></div>
       </div>
           
-    <div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
+    <div class="rounded-3xl p-5 bg-gradient-to-b from-brand-royal/30 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
       <!-- Juego 1 -->
       <div class="flex items-center justify-between mb-3">
         <span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">
@@ -395,7 +403,7 @@
       </div>
     </div>
 
-    <div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
+    <div class="rounded-3xl p-5 bg-gradient-to-b from-brand-royal/30 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
       <!-- Juego 2 -->
       <div class="flex items-center justify-between mb-3">
         <span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">
@@ -414,7 +422,7 @@
       </div>
     </div>
 
-    <div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
+    <div class="rounded-3xl p-5 bg-gradient-to-b from-brand-royal/30 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
       <!-- Juego 3 -->
       <div class="flex items-center justify-between mb-3">
         <span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">
@@ -433,7 +441,7 @@
       </div>
     </div>
 
-    <div class="rounded-3xl p-5 bg-gradient-to-b from-amber-950/40 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
+    <div class="rounded-3xl p-5 bg-gradient-to-b from-brand-royal/30 via-brand-darkSurface to-brand-darkBg border-2 border-brand-gold/60 shadow-2xl relative overflow-hidden flex flex-col">
       <!-- Juego 4 -->
       <div class="flex items-center justify-between mb-3">
         <span class="px-3 py-1 rounded-full bg-brand-gold text-black font-sport font-black text-[11px] tracking-wider uppercase">
@@ -489,12 +497,12 @@
   </section>
   <!-- END: SponsorsSection -->
   <!-- BEGIN: MainFooter -->
-  <footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
+  <footer aria-label="Footer" class="bg-[#050A1C] text-gray-400 pt-16 pb-12 border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="img/Rapibasket.jpeg">
+            <img alt="Logo Rapibasket" class="h-12 w-auto object-contain" src="img/Rapibasket.jpeg">
             <span class="font-sport font-black text-lg text-white">RAPIBASKET CAÑETE</span>
           </div>
           <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>

@@ -16,63 +16,69 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              gold: '#E5B842',
-              goldLight: '#F59E0B',
-              goldDark: '#B8860B',
-              darkBg: '#0B0F19',
-              darkSurface: '#111827',
-              darkCard: '#161F30',
-              accentBlue: '#2563EB',
-              accentOrange: '#EA580C',
-              accentRed: '#DC2626'
+            gray: {
+              50: '#F4F7FF', 100: '#E8EEFC', 200: '#D3DDF5', 300: '#B4C3E8', 400: '#8FA2D1',
+              500: '#6579A8', 600: '#475A8A', 700: '#2F4070', 800: '#1B2A57', 900: '#0F1A40', 950: '#0A1230'
             },
-            'primary-fixed': '#F5D98B',
-            'outline-variant': '#374151',
-            'on-primary-fixed-variant': '#5A4400',
+                        brand: {
+              gold: '#F7B52C',
+              goldLight: '#F26B1D',
+              goldDark: '#C2530C',
+              darkBg: '#070D24',
+              darkSurface: '#0B1433',
+              darkCard: '#101C47',
+              accentBlue: '#4FB3E8',
+              accentOrange: '#F26B1D',
+              accentRed: '#DC2626',
+              sky: '#4FB3E8',
+              royal: '#2F55B8'
+            },
+            'primary-fixed': '#FBD27A',
+            'outline-variant': '#2A3C78',
+            'on-primary-fixed-variant': '#5A3A00',
             'on-primary': '#000000',
-            'surface-dim': '#0B0F19',
-            'secondary-fixed': '#93C5FD',
-            'surface-tint': '#E5B842',
-            'surface-container': '#161F30',
+            'surface-dim': '#070D24',
+            'secondary-fixed': '#9ED8F5',
+            'surface-tint': '#F7B52C',
+            'surface-container': '#101C47',
             'inverse-surface': '#F3F4F6',
             'on-error': '#FFFFFF',
             'secondary-container': '#1E3A8A',
-            'surface': '#0B0F19',
-            'outline': '#4B5563',
-            'primary-container': '#E5B842',
-            'primary-fixed-dim': '#F0C868',
+            'surface': '#070D24',
+            'outline': '#3A4F8F',
+            'primary-container': '#F7B52C',
+            'primary-fixed-dim': '#F9C453',
             'on-surface': '#F3F4F6',
-            'on-surface-variant': '#9CA3AF',
-            'surface-container-high': '#1F2937',
-            'surface-variant': '#1F2937',
+            'on-surface-variant': '#9DB1DC',
+            'surface-container-high': '#17275F',
+            'surface-variant': '#17275F',
             'tertiary-fixed-dim': '#FB923C',
             'on-error-container': '#FEE2E2',
             'on-secondary-fixed-variant': '#1D4ED8',
             'error-container': '#7F1D1D',
-            'surface-container-highest': '#374151',
-            'primary': '#E5B842',
+            'surface-container-highest': '#223580',
+            'primary': '#F7B52C',
             'on-tertiary-fixed-variant': '#9A3412',
             'on-tertiary': '#FFFFFF',
             'error': '#FCA5A5',
-            'tertiary': '#EA580C',
-            'surface-container-lowest': '#080B12',
+            'tertiary': '#F26B1D',
+            'surface-container-lowest': '#050A1C',
             'on-primary-fixed': '#3B2900',
-            'secondary': '#2563EB',
+            'secondary': '#2F55B8',
             'on-secondary-fixed': '#0B1E4D',
-            'inverse-on-surface': '#1F2937',
-            'surface-bright': '#1F2937',
+            'inverse-on-surface': '#17275F',
+            'surface-bright': '#1C2D6B',
             'on-secondary-container': '#93C5FD',
             'on-primary-container': '#4A3600',
             'on-tertiary-container': '#FED7AA',
-            'inverse-primary': '#B8860B',
+            'inverse-primary': '#C2530C',
             'on-secondary': '#FFFFFF',
             'on-tertiary-fixed': '#431407',
             'tertiary-fixed': '#FDBA74',
-            'background': '#0B0F19',
-            'secondary-fixed-dim': '#60A5FA',
+            'background': '#070D24',
+            'secondary-fixed-dim': '#4FB3E8',
             'on-background': '#F3F4F6',
-            'surface-container-low': '#111827',
+            'surface-container-low': '#0B1433',
             'tertiary-container': '#7C2D12'
           },
           borderRadius: {
@@ -135,7 +141,7 @@
         width: 100vw;
         margin: 0;
         padding: 0;
-        background-color: #0B0F19;
+        background-color: #070D24;
         color: #F3F4F6;
       }
       body {
@@ -167,10 +173,10 @@
 </head>
 
 <body class="bg-surface font-body-md text-body-md flex flex-col min-h-screen">
-  <header class="sticky top-0 z-50 bg-[#0B0F19]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
+  <header class="sticky top-0 z-50 bg-[#070D24]/90 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a aria-label="Ir al inicio" class="flex items-center gap-3 group focus:outline-none" href="index.html">
-        <img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(229,184,66,0.35)]" src="img/Rapibasket.jpeg">
+        <img alt="Escudo Oficial Liguilla de Básquetbol Cañete" class="h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(247, 181, 44,0.35)]" src="img/Rapibasket.jpeg">
         <div class="flex flex-col">
           <span class="font-sport font-black text-lg tracking-wider text-white leading-none group-hover:text-brand-gold transition-colors">RAPIBASKET CAÑETE</span>
         </div>
@@ -191,6 +197,7 @@
         </button>
       </div>
     </div>
+  <div aria-hidden="true" class="h-[3px] w-full bg-gradient-to-r from-brand-royal via-brand-sky to-brand-gold"></div>
   </header>
 
   <!-- Mobile Drawer con transición lateral y Glassmorphism Fintech -->
@@ -199,7 +206,7 @@
     <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300"></div>
 
     <!-- Panel lateral deslizante (Off-canvas) -->
-    <div id="mobile-drawer-panel" class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0E1424]/95 backdrop-blur-xl border-l border-brand-gold/30 shadow-[-10px_0_30px_rgba(0,0,0,0.8)] flex flex-col p-6 z-10 translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
+    <div id="mobile-drawer-panel" class="absolute top-0 right-0 w-72 max-w-[85vw] h-full bg-[#0B1330]/95 backdrop-blur-xl border-l border-brand-gold/30 shadow-[-10px_0_30px_rgba(0,0,0,0.8)] flex flex-col p-6 z-10 translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
       
       <!-- Encabezado del Drawer -->
       <div class="flex items-center justify-between pb-4 border-b border-gray-800/80">
@@ -252,7 +259,7 @@
       <section class="relative px-gutter-mobile pt-6 pb-space-xs flex flex-col gap-space-xs overflow-hidden">
         <!-- Brillo dorado de fondo -->
         <div class="absolute -top-12 -right-12 w-52 h-52 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none"></div>
-        <div class="absolute top-10 -left-16 w-40 h-40 rounded-full bg-brand-accentBlue/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-10 -left-16 w-40 h-40 rounded-full bg-brand-sky/15 blur-3xl pointer-events-none"></div>
 
         <!-- Etiqueta de temporada -->
         <div class="relative inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30">
@@ -262,7 +269,7 @@
 
         <!-- Título -->
         <h1 class="relative flex items-center gap-2 font-sport font-black italic uppercase text-[34px] leading-none tracking-tight text-white">
-          <span>Cronograma <span class="bg-gradient-to-r from-brand-gold to-brand-goldLight bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(229,184,66,0.35)]">Oficial</span></span>
+          <span>Cronograma <span class="bg-gradient-to-r from-brand-gold to-brand-goldLight bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(247, 181, 44,0.35)]">Oficial</span></span>
         </h1>
 
         <!-- Línea decorativa -->
@@ -295,12 +302,12 @@
     </div>
   </main>
 
-  <footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
+  <footer aria-label="Footer" class="bg-[#050A1C] text-gray-400 pt-16 pb-12 border-t border-gray-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <img alt="Logo Liguilla Cañete" class="h-12 w-auto object-contain" src="img/Rapibasket.jpeg">
+            <img alt="Logo Rapibasket" class="h-12 w-auto object-contain" src="img/Rapibasket.jpeg">
             <span class="font-sport font-black text-lg text-white">RAPIBASKET CAÑETE</span>
           </div>
           <p class="text-xs text-gray-400 leading-relaxed"> El torneo de baloncesto más relevante de la provincia. Fomentando el deporte, la disciplina y el espectáculo cada sábado. </p>
