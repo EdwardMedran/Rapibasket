@@ -278,120 +278,20 @@
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r2')" type="button"> Jornada 2 </button>
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r3')" type="button"> Jornada 3 </button>
           <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r4')" type="button"> Jornada 4 </button>
+          <button class="round-btn shrink-0 px-space-md py-2 rounded-full font-label-md text-label-md uppercase transition-all bg-surface-container text-on-surface-variant hover:text-on-surface active:scale-95" onclick="switchRound(this, 'r5')" type="button"> Jornada 5 </button>
         </div>
       </section>
 
-    <section  section class="px-gutter-mobile py-space-xs flex items-center justify-between">
+      <section class="px-gutter-mobile py-space-xs flex items-center justify-between">
         <div class="flex items-center gap-space-xs">
           <span class="font-headline-sm text-headline-sm uppercase text-primary tracking-wide" id="active-round-label">Jornada 5</span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant">• Sábado 24 Mayo</span>
-        </div>
+          <span class="font-body-sm text-body-sm text-on-surface-variant" id="active-round-date">• Sábado 24 Mayo</span>
         </div>
       </section>
 
-      <!-- Match Cards List (3 Encuentros: Varones - Damas - Varones) -->
-      <section class="px-gutter-mobile py-space-xs flex flex-col gap-space-sm" id="matches-container">
-        <!-- Partido 1 (15:00 hrs) - VARONES (Finalizado) -->
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-md flex flex-col gap-space-sm border border-gray-800/60">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider bg-secondary-container/40 text-secondary-fixed border border-secondary-container/60">
-                Varones
-              </span>
-              <div class="flex items-center gap-1 text-on-surface-variant">
-                <span class="material-symbols-outlined text-[15px]">schedule</span>
-                <span class="font-label-md text-label-md text-on-surface font-semibold">15:00 hrs</span>
-              </div>
-            </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold">
-              Finalizado
-            </span>
-          </div>
-
-          <div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
-            <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
-                <span class="material-symbols-outlined text-[18px]">sports_martial_arts</span>
-              </div>
-              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Gladiadores</span>
-            </div>
-            <div class="flex items-center gap-1 px-space-xs shrink-0">
-              <span class="font-stat-counter text-stat-counter text-primary font-bold">78</span>
-              <span class="font-label-xs text-label-xs text-outline">-</span>
-              <span class="font-stat-counter text-stat-counter text-on-surface-variant font-bold">74</span>
-            </div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
-              <span class="font-label-md text-[12px] uppercase text-on-surface-variant leading-tight font-bold truncate">Warriors Imp.</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant">
-                <span class="material-symbols-outlined text-[18px]">swords</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between pt-space-2xs text-on-surface-variant">
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: C. Silva (24 pts)</span>
-          </div>
-        </article>
-
-
-        <!-- Partido 3 (18:30 hrs) - VARONES (Por Disputar - Match Estelar) -->
-        <article class="relative bg-surface-container rounded-xl overflow-hidden p-space-md shadow-lg flex flex-col gap-space-sm bg-gradient-to-br from-surface-container via-surface-container to-surface-container-high border border-primary/40">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider bg-secondary-container/40 text-secondary-fixed border border-secondary-container/60">
-                Varones
-              </span>
-              <div class="flex items-center gap-1 text-primary">
-                <span class="material-symbols-outlined text-[15px]">schedule</span>
-                <span class="font-label-md text-label-md text-on-surface font-bold">18:30 hrs</span>
-              </div>
-            </div>
-            <span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-primary-container text-on-primary-container font-bold shadow-sm">
-              Por Disputar
-            </span>
-          </div>
-
-          <div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
-            <div class="flex items-center gap-space-xs flex-1 min-w-0">
-              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-sm shrink-0">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
-              </div>
-              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Titanes Cañete</span>
-            </div>
-            <div class="flex items-center justify-center px-space-xs shrink-0">
-              <span class="font-label-xs text-label-xs text-primary font-bold px-1.5 py-0.5 rounded bg-surface-container-high">VS</span>
-            </div>
-            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
-              <span class="font-label-md text-[12px] uppercase text-on-surface leading-tight font-bold truncate">Halcones Valle</span>
-              <div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary shadow-sm shrink-0">
-                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flight_takeoff</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between pt-space-2xs">
-            <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador:</span>
-            <button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-label-md text-label-md uppercase transition-colors" onclick="this.innerHTML='&lt;span class=\'material-symbols-outlined text-[16px] text-primary\'&gt;check&lt;/span&gt; Recordatorio Fijado'" type="button">
-          </div>
-        </article>
-      </section>
+      <!-- Los partidos se dibujan automáticamente desde el script de abajo -->
+      <section class="px-gutter-mobile py-space-xs flex flex-col gap-space-sm" id="matches-container"></section>
     </div>
-
-    <script>
-      function switchRound(btn, roundKey) {
-        const buttons = document.querySelectorAll('.round-btn');
-        buttons.forEach(b => {
-          b.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-lg', 'shadow-primary-container/20');
-          b.classList.add('bg-surface-container', 'text-on-surface-variant');
-        });
-        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
-        btn.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-lg', 'shadow-primary-container/20');
-        const label = document.getElementById('active-round-label');
-        if (label) {
-          label.innerText = btn.innerText.trim();
-        }
-      }
-    </script>
   </main>
 
   <footer aria-label="Footer" class="bg-[#080B12] text-gray-400 pt-16 pb-12 border-t border-gray-800">
@@ -428,6 +328,7 @@
     </div>
   </footer>
 
+  <!-- Script del menú lateral -->
   <script>
     (function() {
       const toggle = document.getElementById('mobile-menu-toggle');
@@ -483,6 +384,153 @@
       if (backdrop) backdrop.addEventListener('click', closeMenu);
       links.forEach(link => link.addEventListener('click', closeMenu));
     })();
+  </script>
+
+  <!-- Script de las jornadas: datos + render de partidos -->
+  <script>
+    /* ===== Datos de las jornadas (cambia nombres, fechas y marcadores a tu gusto) ===== */
+    const ROUNDS = {
+      r1: {
+        label: 'Jornada 1', date: 'Sábado 26 Abril',
+        matches: [
+          { cat: 'Varones', time: '15:00', home: 'Titanes Cañete', away: 'Gladiadores',      hs: 81, as: 77, status: 'done', top: 'M. Rojas (26 pts)' },
+          { cat: 'Damas',   time: '16:45', home: 'Reinas del Valle', away: 'Lady Hawks',     hs: 52, as: 48, status: 'done', top: 'A. Paredes (18 pts)' },
+          { cat: 'Varones', time: '18:30', home: 'Halcones Valle', away: 'Warriors Imp.',    hs: 69, as: 72, status: 'done', top: 'C. Silva (22 pts)' }
+        ]
+      },
+      r2: {
+        label: 'Jornada 2', date: 'Sábado 3 Mayo',
+        matches: [
+          { cat: 'Varones', time: '15:00', home: 'Warriors Imp.', away: 'Titanes Cañete',    hs: 64, as: 70, status: 'done', top: 'J. Quispe (21 pts)' },
+          { cat: 'Damas',   time: '16:45', home: 'Cañete Queens', away: 'Reinas del Valle',  hs: 45, as: 58, status: 'done', top: 'L. Campos (19 pts)' },
+          { cat: 'Varones', time: '18:30', home: 'Gladiadores',   away: 'Halcones Valle',    hs: 88, as: 80, status: 'done', top: 'D. Flores (30 pts)' }
+        ]
+      },
+      r3: {
+        label: 'Jornada 3', date: 'Sábado 10 Mayo',
+        matches: [
+          { cat: 'Varones', time: '15:00', home: 'Halcones Valle', away: 'Titanes Cañete',   hs: 75, as: 79, status: 'done', top: 'M. Rojas (25 pts)' },
+          { cat: 'Damas',   time: '16:45', home: 'Lady Hawks',     away: 'Cañete Queens',    hs: 61, as: 55, status: 'done', top: 'S. Ruiz (20 pts)' },
+          { cat: 'Varones', time: '18:30', home: 'Warriors Imp.',  away: 'Gladiadores',      hs: 71, as: 71, status: 'done', top: 'C. Silva (27 pts)' }
+        ]
+      },
+      r4: {
+        label: 'Jornada 4', date: 'Sábado 17 Mayo',
+        matches: [
+          { cat: 'Varones', time: '15:00', home: 'Titanes Cañete', away: 'Warriors Imp.',    hs: 84, as: 66, status: 'done', top: 'J. Quispe (28 pts)' },
+          { cat: 'Damas',   time: '16:45', home: 'Reinas del Valle', away: 'Cañete Queens',  hs: 50, as: 47, status: 'done', top: 'A. Paredes (17 pts)' },
+          { cat: 'Varones', time: '18:30', home: 'Gladiadores',    away: 'Halcones Valle',   hs: 77, as: 82, status: 'done', top: 'R. Vega (24 pts)' }
+        ]
+      },
+      r5: {
+        label: 'Jornada 5', date: 'Sábado 24 Mayo',
+        matches: [
+          { cat: 'Varones', time: '15:00', home: 'Gladiadores',    away: 'Warriors Imp.',    hs: 78, as: 74, status: 'done',    top: 'C. Silva (24 pts)' },
+          { cat: 'Varones', time: '18:30', home: 'Titanes Cañete', away: 'Halcones Valle',   status: 'pending' }
+        ]
+      }
+    };
+
+    /* ===== Helpers de render ===== */
+    const CAT_STYLES = {
+      Varones: 'bg-secondary-container/40 text-secondary-fixed border border-secondary-container/60',
+      Damas:   'bg-pink-900/40 text-pink-300 border border-pink-800/60'
+    };
+
+    function teamIcon(name, side) {
+      const color = side === 'right' ? 'text-on-surface-variant' : 'text-primary';
+      return `<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0 ${color}">
+                <span class="material-symbols-outlined text-[18px]">sports_basketball</span>
+              </div>`;
+    }
+
+    function matchCard(m) {
+      const done = m.status === 'done';
+      const homeWon = done && m.hs > m.as;
+      const awayWon = done && m.as > m.hs;
+
+      const center = done
+        ? `<div class="flex items-center gap-1 px-space-xs shrink-0">
+             <span class="font-stat-counter text-stat-counter font-bold ${homeWon ? 'text-primary' : 'text-on-surface-variant'}">${m.hs}</span>
+             <span class="font-label-xs text-label-xs text-outline">-</span>
+             <span class="font-stat-counter text-stat-counter font-bold ${awayWon ? 'text-primary' : 'text-on-surface-variant'}">${m.as}</span>
+           </div>`
+        : `<div class="flex items-center justify-center px-space-xs shrink-0">
+             <span class="font-label-xs text-label-xs text-primary font-bold px-1.5 py-0.5 rounded bg-surface-container-high">VS</span>
+           </div>`;
+
+      const statusBadge = done
+        ? `<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-surface-container-highest text-on-surface-variant font-bold">Finalizado</span>`
+        : `<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs uppercase tracking-wider bg-primary-container text-on-primary-container font-bold shadow-sm">Por Disputar</span>`;
+
+      const footer = done
+        ? `<span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: ${m.top}</span>`
+        : `<span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: —</span>
+           <button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-space-sm py-1.5 rounded-lg flex items-center gap-1 font-label-md text-label-md uppercase transition-colors"
+                   onclick="this.innerHTML='<span class=\\'material-symbols-outlined text-[16px] text-primary\\'>check</span> Recordatorio Fijado'"
+                   type="button">
+             <span class="material-symbols-outlined text-[16px]">notifications</span> Recordar
+           </button>`;
+
+      const cardStyle = done
+        ? 'bg-surface-container border border-gray-800/60 shadow-md'
+        : 'bg-gradient-to-br from-surface-container via-surface-container to-surface-container-high border border-primary/40 shadow-lg';
+
+      return `
+        <article class="relative rounded-xl overflow-hidden p-space-md flex flex-col gap-space-sm ${cardStyle}">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded font-sport text-[10px] font-bold uppercase tracking-wider ${CAT_STYLES[m.cat] || CAT_STYLES.Varones}">${m.cat}</span>
+              <div class="flex items-center gap-1 text-on-surface-variant">
+                <span class="material-symbols-outlined text-[15px]">schedule</span>
+                <span class="font-label-md text-label-md text-on-surface font-semibold">${m.time} hrs</span>
+              </div>
+            </div>
+            ${statusBadge}
+          </div>
+
+          <div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between">
+            <div class="flex items-center gap-space-xs flex-1 min-w-0">
+              ${teamIcon(m.home, 'left')}
+              <span class="font-label-md text-[12px] uppercase leading-tight font-bold truncate ${awayWon ? 'text-on-surface-variant' : 'text-on-surface'}">${m.home}</span>
+            </div>
+            ${center}
+            <div class="flex items-center justify-end gap-space-xs flex-1 min-w-0 text-right">
+              <span class="font-label-md text-[12px] uppercase leading-tight font-bold truncate ${homeWon ? 'text-on-surface-variant' : 'text-on-surface'}">${m.away}</span>
+              ${teamIcon(m.away, 'right')}
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-space-2xs">${footer}</div>
+        </article>`;
+    }
+
+    /* ===== Cambiar de jornada ===== */
+    function switchRound(btn, roundKey) {
+      const round = ROUNDS[roundKey];
+      if (!round) return;
+
+      // Estilo de botones
+      document.querySelectorAll('.round-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-lg', 'shadow-primary-container/20');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      btn.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-lg', 'shadow-primary-container/20');
+
+      // Título y fecha
+      document.getElementById('active-round-label').innerText = round.label;
+      document.getElementById('active-round-date').innerText = '• ' + round.date;
+
+      // Partidos
+      document.getElementById('matches-container').innerHTML = round.matches.map(matchCard).join('');
+    }
+
+    // Al cargar la página: mostrar la Jornada 5 (la actual)
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.round-btn');
+      if (buttons[4]) switchRound(buttons[4], 'r5');
+    });
   </script>
 </body>
 
