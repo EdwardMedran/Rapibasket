@@ -401,10 +401,10 @@
       r1: {
         label: 'Fecha 1', date: 'Sábado 24 de Octubre',
         matches: [
-          { cat: 'Varones', time: '16:00', fase: 'Fase Regular', home: 'Black Hawks', away: 'Wolfs A', status: 'pending' },
-          { cat: 'Damas', time: '17:00', fase: 'Fase Regular', home: 'Court Warriors', away: 'Fem Master', status: 'pending' },
-          { cat: 'Varones', time: '18:00', fase: 'Fase Regular', home: 'Wolfs B', away: 'Saint Paul', status: 'pending' },
-          { cat: 'Varones', time: '19:00', fase: 'Fase Regular', home: 'Black Hawks', away: 'Street Ballers', status: 'pending' }
+          { cat: 'Varones', time: '16:00', fase: 'Fase Regular', home: 'Black Hawks', away: 'Wolfs A', status: 'done', hs: 19, as: 58, top: 'Alejandro Llanos (16 pts)' },
+          { cat: 'Damas', time: '17:00', fase: 'Fase Regular', home: 'Court Warriors', away: 'Fem Master', status: 'done', hs: 17, as: 25, top: 'Camila Falconi (12 pts)' },
+          { cat: 'Varones', time: '18:00', fase: 'Fase Regular', home: 'Wolfs B', away: 'Saint Paul', status: 'done', hs: 53, as: 37, top: 'Manuel Sisiruca (28 pts)' },
+          { cat: 'Varones', time: '19:00', fase: 'Fase Regular', home: 'Black Hawks', away: 'Street Ballers', status: 'done', hs: 17, as: 20, top: 'William Saldaña (10 pts)' }
         ]
       },
       r2: {
@@ -471,9 +471,9 @@
       const faseClass = m.fase && m.fase !== 'Fase Regular' ? 'text-primary font-semibold' : 'text-on-surface-variant';
       const footer = done
         ? `<span class="font-body-sm text-body-sm ${faseClass}">${m.fase || ''}</span>
-           <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: ${m.top}</span>`
+           <span class="font-body-sm text-body-sm text-on-surface-variant">MVP: ${m.top}</span>`
         : `<span class="font-body-sm text-body-sm ${faseClass}">${m.fase || ''}</span>
-           <span class="font-body-sm text-body-sm text-on-surface-variant">Máx. Anotador: --</span>`;
+           <span class="font-body-sm text-body-sm text-on-surface-variant">MVP: --</span>`;
 
       const cardStyle = done
         ? 'bg-surface-container border border-gray-800/60 shadow-md'
