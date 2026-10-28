@@ -21,6 +21,8 @@
     @keyframes bbspin{from{rotate:0deg}to{rotate:720deg}}
     @keyframes bbbob{from{transform:translateY(-14px)}to{transform:translateY(14px)}}
     /* secciones que tenían fondo sólido y tapaban las pelotas */
+    html{background:#070D24 !important}
+    body{background:transparent !important}
     #resultados, main.bg-surface{background:transparent !important}
     @media (prefers-reduced-motion: reduce){
       #basket-bg .bb,#basket-bg .bi{animation:none}
